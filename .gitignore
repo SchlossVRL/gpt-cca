@@ -162,4 +162,5 @@ cython_debug/
 ## Add text file to prevent keys
 
 *.txt
+*.pdf
 .DS_Store
