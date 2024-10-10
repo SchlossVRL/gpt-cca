@@ -5,8 +5,10 @@ import numpy as np
 import base64
 
 
-# OpenAI API Key
-api_key = "YOUR_OPENAI_API_KEY"
+# OpenAI API Key|| Make sure to place the SVRL_api_key.txt file in the same directory as this script    
+with open('SVRL_api_key.txt') as f:
+    openai.api_key= f.readline()
+    f.close()
 
 ### load the ratings data from text only prompts
 script_dir = os.path.dirname(__file__)
@@ -70,7 +72,7 @@ color_image_paths = [os.path.join(script_dir, '../../images',x) for x in os.list
 #       ]
 #     }
 #   ],
-#   "max_tokens": 300
+#   "max_tokens": 30
 # }
 
 # response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
