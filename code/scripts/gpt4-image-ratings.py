@@ -57,9 +57,11 @@ def create_batch_file(batch_file, concepts, color_image_paths):
         for concept in concepts:
             for color_image_path in color_image_paths:
                 base64_image = encode_image(color_image_path)
-                f.write(
-                    f'''{{"custom_id": "{concept}-{os.path.basename(color_image_path)}", "method": "POST", "url": "/v1/chat/completions", "body": {{ "model": "gpt-4o-mini", "messages": [ {{ "role": "system", "content": "You are an expert on color-concept associations." }}, {{ "role": "user", "content": "I will give you the hexcode for a color and a concept. Rate on a continuous scale from 0 to 1, using 3 decimal places, how associated the color is with the concept. The concept is '{concept}'. Color: {color_file_to_hex[color_image_path]}. Answer with only the number." }}], "temperature" : 0 }}}}\n'''
-                  )
+                # f.write(
+                #     f'''{{"custom_id": "{concept}-{os.path.basename(color_image_path)}", "method": "POST", "url": "/v1/chat/completions", "body": {{ "model": "gpt-4o-mini", "messages": [ {{ "role": "system", "content": "You are an expert on color-concept associations." }}, {{ "role": "user", "content": "I will give you the hexcode for a color and a concept. Rate on a continuous scale from 0 to 1, using 3 decimal places, how associated the color is with the concept. The concept is '{concept}'. Color: {color_file_to_hex[color_image_path]}. Answer with only the number." }}], "temperature" : 0 }}}}\n'''
+                #   )
+                f.write(f'{{"custom_id": "{concept}-{os.path.basename(color_image_path)}", "method": "POST", "url": "/v1/chat/completions", "body": {{"model": "gpt-4o-mini", "messages": [{{"role": "user", "content": [{{"type": "text", "text": "Rate on a continuous scale from 0 to 1, using 3 decimal places, how associated the colored patch in the image is with the concept \'{concept}\'. Answer with only the number."}}, {{"type": "image_url", "image_url": {{"url": "data:image/jpeg;base64,{base64_image}"}}}}]}}], "temperature": 1}}}}\n')
+
     f.close()
 
 # Retrieve the batch file path
@@ -68,22 +70,22 @@ batch_file = os.path.join(script_dir, 'batch_inputs.jsonl')
 create_batch_file(batch_file, concepts, color_image_paths)
 
 # Create the batch input file
-batch_input_file = client.files.create(
-    file=open(batch_file, 'rb'),
-    purpose='batch'
-)
+# batch_input_file = client.files.create(
+#     file=open(batch_file, 'rb'),
+#     purpose='batch'
+# )
 
-# Create the batch job
-batch_job = client.batches.create(
-  input_file_id=batch_input_file.id,
-  endpoint="/v1/chat/completions",
-  completion_window="24h",
-)
+# # Create the batch job
+# batch_job = client.batches.create(
+#   input_file_id=batch_input_file.id,
+#   endpoint="/v1/chat/completions",
+#   completion_window="24h",
+# )
 
-# Retrieve the batch id for the job
-batch_input_file_id = client.batches.retrieve(batch_job.id)
+# # Retrieve the batch id for the job
+# batch_input_file_id = client.batches.retrieve(batch_job.id)
 
-print(batch_input_file_id)
+# print(batch_input_file_id)
 
 
 ### prompt structure: imagine cycling through all the concepts for each concept cycling through all color images
