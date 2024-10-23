@@ -67,25 +67,26 @@ def create_batch_file(batch_file, concepts, color_image_paths):
 # Retrieve the batch file path
 batch_file = os.path.join(script_dir, 'batch_inputs.jsonl')
 
-create_batch_file(batch_file, concepts, color_image_paths)
+# Uncomment the line below to create the batch file
+# create_batch_file(batch_file, concepts, color_image_paths)
 
 # Create the batch input file
-# batch_input_file = client.files.create(
-#     file=open(batch_file, 'rb'),
-#     purpose='batch'
-# )
+batch_input_file = client.files.create(
+    file=open(batch_file, 'rb'),
+    purpose='batch'
+)
 
-# # Create the batch job
-# batch_job = client.batches.create(
-#   input_file_id=batch_input_file.id,
-#   endpoint="/v1/chat/completions",
-#   completion_window="24h",
-# )
+# Create the batch job
+batch_job = client.batches.create(
+  input_file_id=batch_input_file.id,
+  endpoint="/v1/chat/completions",
+  completion_window="24h",
+)
 
-# # Retrieve the batch id for the job
-# batch_input_file_id = client.batches.retrieve(batch_job.id)
+# Retrieve the batch id for the job
+batch_input_file_id = client.batches.retrieve(batch_job.id)
 
-# print(batch_input_file_id)
+print(batch_input_file_id)
 
 
 ### prompt structure: imagine cycling through all the concepts for each concept cycling through all color images
