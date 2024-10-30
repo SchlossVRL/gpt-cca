@@ -7,7 +7,10 @@ from tenacity import (
     stop_after_attempt,
     wait_random_exponential,
 )
+import openai
 from openai import OpenAI
+import os
+import base64
 
 def create_df(concepts, color_image_paths):
     # gather all the concepts
@@ -30,7 +33,7 @@ def create_df(concepts, color_image_paths):
 
     # create the dataframe with the columns concept, color_index, system_prompt, user_prompt, img_url, response
     all_stim_df = pd.DataFrame({'concept': all_concepts, 'color_index': all_color_index, 'system_prompt': all_system_prompts, 'user_prompt': all_user_prompts, 'img_url': all_img_urls, 'response': None})
-
+    return all_stim_df
 
 def load_concepts_and_colors():
     # load the ratings data from text only prompts
@@ -78,13 +81,14 @@ def completion_with_backoff(**kwargs):
     return client.chat.completions.create(**kwargs)
 
 def return_chat_response(system_prompt, user_prompt, image_url):
+    # make the request to the api
     response = completion_with_backoff(model="gpt-4o", messages=[
         {
             "role": "system",
             "content": [
                 {
                     "type": "text",
-                    "text": "You are an expert on color-concept associations."
+                    "text": system_prompt
                 },
             ],
         },
@@ -93,13 +97,13 @@ def return_chat_response(system_prompt, user_prompt, image_url):
             "content": [
                 {
                     "type": "text",
-                    "text": prompt
+                    "text": user_prompt
                 },
                 {
                     "type": "image_url",
-                    "image_url": {{
+                    "image_url": {
                         "url": image_url
-                    }}
+                    }
                 }
             ],
         },
@@ -120,8 +124,10 @@ if csv_exists==False:
 for i, row in tqdm.tqdm(all_stim_df.iterrows(), total=len(all_stim_df)):
     if isinstance(row.response, str):
         continue
+    # get the response from the api for each row
     response = return_chat_response(row['system_prompt'], row['user_prompt'], row['img_url'])
     responses.append(response)
+    # Save the responses to the csv file every 100 rows
     if i % 100 == 0:
         if len(responses) < len(all_stim_df):
             tmp_responses = responses + [None] * (len(all_stim_df) - len(responses))
