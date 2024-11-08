@@ -1,79 +1,97 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
-def load_responses_df():
-    # Load the CSV file, selecting only relevant columns and skipping the first unnamed column
-    all_stim_df = pd.read_csv(
-        "../../data/all_stim.csv",
-        usecols=['concept', 'color_index', 'response']
-    )
-
-    # Ensure 'color_index' is of integer type
-    all_stim_df['color_index'] = all_stim_df['color_index'].astype(int)
-
-    # Convert 'response' to numeric, coercing errors to NaN
-    all_stim_df['response'] = pd.to_numeric(all_stim_df['response'], errors='coerce')
-
-    # Pivot the DataFrame: concepts as rows, color_index as columns, response as values
-    pivoted_df = all_stim_df.pivot(index='concept', columns='color_index', values='response')
-
-    # Sort the columns numerically from 0 to 69
-    pivoted_df = pivoted_df.sort_index(axis=1)
+"""
+Function to load data from a CSV file and convert it to a DataFrame.
+"""
+def load_data(path):
+    # Load the CSV file from the path, setting the 'concept' column as the index
+    df = pd.read_csv(path, header=0, index_col=0)
     
-    pivoted_df.to_csv(f'../../data/gpt4o-11052024_0_images.csv')
-
-    return pivoted_df
-
-def load_benchmark_data():
-    # Load the CSV file, setting the 'concept' column as the index
-    df = pd.read_csv('../../data/gpt4_ratings.csv', header=0, index_col=0)
+    # Convert all data to numeric
     df = df.apply(pd.to_numeric, errors='coerce')
-
+    
+    # Filter out columns that cannot be converted to integers
+    numeric_columns = [col for col in df.columns if col.isdigit()]
+    df = df[numeric_columns]
+    
     # convert the column type to int for sorting 
     df.columns = df.columns.astype(int)
     # sort the columns
     df = df.sort_index(axis=1)
     return df
 
-def compute_correlation(df, benchmark_data):
-    # Initialize an empty dictionary to store correlations
-    correlations = {}
-    
-    # Iterate through each concept in the DataFrame
-    for concept, row in df.iterrows():
-        if concept in benchmark_data.index:
-            benchmark_row = benchmark_data.loc[concept]
-            # Compute the Pearson correlation
-            corr = row.corr(benchmark_row)
-            correlations[concept] = corr
-    
-    # Convert the dictionary to a DataFrame with a 'Correlation' column
-    correlation_df = pd.DataFrame.from_dict(correlations, orient='index', columns=['Correlation'])
-    
-    return correlation_df
+def show_plot():
+    num_categories = len(categories)
+    fig, axes = plt.subplots(nrows=2, ncols=(num_categories + 1) // 2, figsize=(15, 10), constrained_layout=True)
+    axes = axes.flatten()
+
+    # Plot each category in a separate subplot
+    for idx, (category, concepts) in enumerate(categories.items()):
+        # if the concept is in the category, then add it to the list of concepts
+        category_df = avg_df[avg_df['Concept'].isin(concepts)]
+        x = np.arange(len(category_df))  # label locations
+        width = 0.25  # width for each of the three bars
+
+        # Plot bars for each concept in the category
+        axes[idx].bar(x - width, category_df['4o Avg'], width, label='4o')
+        axes[idx].bar(x, category_df['Benchmark Avg'], width, label='Benchmark')
+        axes[idx].bar(x + width, category_df['4o-mini Avg'], width, label='4o-mini')
+
+        # Set labels and title
+        axes[idx].set_title(category)
+        axes[idx].set_xticks(x)
+        axes[idx].set_xticklabels(category_df['Concept'], rotation=90)
+        axes[idx].set_ylim(0, 1)
+
+    # legend
+    fig.legend(['GPT 4o', 'Benchmark', 'GPT 4o-mini'], loc='upper right')
+    # show the plot
+    plt.show()
 
 if __name__ == "__main__":
-    # Load benchmark and response data
-    benchmark_data = load_benchmark_data()
-    responses_df = load_responses_df()
+    # Load benchmark and data from GPT-4o and GPT-4o-mini
+    benchmark_data = load_data('../../data/gpt4_ratings.csv')
+    responses_4o_df = load_data("../../data/gpt-4o-11052024_0_images.csv")
+    responses_4o_mini_df = load_data("../../data/gpt-4o-mini-11052024_0_images.csv")
+
+    # Align all DataFrames to have the same index
+    common_index = benchmark_data.index.intersection(responses_4o_df.index).intersection(responses_4o_mini_df.index)
+    benchmark_data = benchmark_data.reindex(common_index)
+    responses_4o_df = responses_4o_df.reindex(common_index)
+    responses_4o_mini_df = responses_4o_mini_df.reindex(common_index)
+
+    # Calculate average for each concept
+    responses_4o_df['average'] = responses_4o_df.mean(axis=1)
+    benchmark_data['average'] = benchmark_data.mean(axis=1)
+    responses_4o_mini_df['average'] = responses_4o_mini_df.mean(axis=1)
     
-    # Compute correlations
-    correlations = compute_correlation(responses_df, benchmark_data)
-    
-    # Calculate the average correlation
-    average_correlation = correlations['Correlation'].mean()
-    
-    # Reset index to use 'concept' as a column for plotting
-    correlations_reset = correlations.reset_index().rename(columns={'index': 'Concept'})
-    
-    # Plot the data
-    plt.figure(figsize=(12, 8))
-    plt.scatter(correlations_reset['Concept'], correlations_reset['Correlation'])
-    plt.title('GPT vs Human Correlation')
-    plt.xlabel('Concepts')
-    plt.ylabel('Correlation')
-    plt.xticks(rotation=90)  # Rotate x-axis labels for better readability
-    plt.axhline(y=average_correlation, color='r', label=f'Average Correlation: {average_correlation:.3f}')
-    plt.legend()
-    plt.tight_layout()
-    plt.show()
+    # Create a new DataFrame with 'Concept', '4o Avg', 'Benchmark Avg', and '4o-mini Avg'
+    avg_df = pd.DataFrame({
+        'Concept': responses_4o_df.index,
+        '4o Avg': responses_4o_df['average'],
+        'Benchmark Avg': benchmark_data['average'],
+        '4o-mini Avg': responses_4o_mini_df['average']
+    })
+
+    # define categories and the concepts in each category (from https://arxiv.org/pdf/2406.17781)
+    categories = {
+        "animals": ["lion", "frog", "bear", "bird", "fish"],
+        "clothes": ["socks", "pants", "shoes", "shirt", "dress"],
+        "fruits": ["watermelon", "blueberry", "lemon", "mango", "strawberry"],
+        "fruits_2": ["banana", "grape", "apple", "peach", "cherry"],
+        "scenes": ["ocean", "sky", "field", "beach", "sunset"],
+        "vegetables": ["celery", "carrot", "corn", "eggplant", "mushroom"],
+        "vehicles": ["boat", "plane", "truck", "car", "train"],
+        "activities": ["sleeping", "eating", "working", "driving", "leisure"],
+        "directions": ["above", "below", "far", "near", "beside"],
+        "emotions": ["happy", "sad", "angry", "disgust", "fearful"],
+        "properties": ["speed", "comfort", "efficiency", "safety", "reliability"],
+        "values": ["love", "evil", "greed", "peace", "justice"],
+        "times-of-day": ["night", "day", "noon", "dusk", "dawn"],
+        "weather": ["sandstorm", "blizzard", "drought", "hurricane", "lightning"]
+    }
+
+    # Show the plot
+    show_plot()
