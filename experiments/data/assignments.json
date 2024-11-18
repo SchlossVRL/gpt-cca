@@ -1,0 +1,123 @@
+var gptPal = {
+    // "0": {
+    //     "corn": "#c7b88b",
+    //     "carrot": "#cc4f1b",
+    //     "grape": "#600b84",
+    //     "banana": "#d0e942"
+    // },
+    // "1": {
+    //     "sleeping": "#000000",
+    //     "driving": "#d5b811",
+    //     "peach": "#f7a75a",
+    //     "cherry": "#e81a4b"
+    // },
+    // "2": {
+    //     "working": "#777777",
+    //     "leisure": "#cd26c7",
+    //     "safety": "#73cf10",
+    //     "comfort": "#632b14"
+    // },
+    // "3": {
+    //     "eggplant": "#72005e",
+    //     "celery": "#608218",
+    //     "efficiency": "#b9b9b9",
+    //     "speed": "#ea1d1d"
+    // },
+    // "4": {
+    //     "working": "#777777",
+    //     "leisure": "#4bcf8e",
+    //     "grape": "#512d5f",
+    //     "banana": "#d5b811"
+    // },
+    // "5": {
+    //     "eggplant": "#3518ad",
+    //     "celery": "#aac510",
+    //     "peach": "#f7a75a",
+    //     "cherry": "#ea1d1d"
+    // },
+    // "6": {
+    //     "corn": "#d5b811",
+    //     "carrot": "#cc4f1b",
+    //     "safety": "#73cf10",
+    //     "comfort": "#632b14"
+    // },
+    // "7": {
+    //     "sleeping": "#000000",
+    //     "driving": "#d5b811",
+    //     "efficiency": "#67cf5c",
+    //     "speed": "#c94e4b"
+    // },
+	
+    "8": {
+        "corn": "#d5b811",
+        "carrot": "#cc4f1b",
+        "peach": "#f1a78a",
+        "cherry": "#e81a4b"
+    },
+    "9": {
+        "sleeping": "#000000",
+        "driving": "#ea1d1d",
+        "grape": "#72005e",
+        "banana": "#f7db7c"
+    },
+    "10": {
+        "working": "#632b14",
+        "leisure": "#cd26c7",
+        "efficiency": "#1c3d61",
+        "speed": "#ea1d1d"
+    },
+    "11": {
+        "eggplant": "#600b84",
+        "celery": "#a3c55b",
+        "safety": "#d5b811",
+        "comfort": "#632b14"
+    },
+    "12": {
+        "working": "#777777",
+        "leisure": "#4bcf8e",
+        "peach": "#f1a78a",
+        "cherry": "#ea1d1d"
+    },
+    "13": {
+        "eggplant": "#512d5f",
+        "celery": "#96c58c",
+        "grape": "#cd26c7",
+        "banana": "#d5b811"
+    },
+    "14": {
+        "corn": "#d5b811",
+        "carrot": "#ac6619",
+        "efficiency": "#73f5b0",
+        "speed": "#ea1d1d"
+    },
+    "15": {
+        "sleeping": "#000000",
+        "driving": "#ea1d1d",
+        "safety": "#d0e942",
+        "comfort": "#632b14"
+    }
+}
+
+
+
+
+var t20pal = {"fruits":{"apple": "#17becf", "banana": "#bcbd22", "cherry": "#d62728", "grape": "#9467bd", "peach": "#c49c94"},
+	"vegetables":{"carrot": "#ff7f0e", "celery": "#98df8a", "corn": "#bcbd22", "eggplant": "#9467bd", "mushroom": "#c7c7c7"},
+"features":{"comfort": "#f7b6d2", "efficiency": "#ff7f0e", "reliability": "#9467bd", "safety": "#bcbd22", "speed": "#d62728"},
+"activities":{"driving": "#d62728", "eating": "#ff7f0e", "leisure": "#f7b6d2", "sleeping": "#1f77b4", "working": "#8c564b"}
+}
+
+var uw71pal = {"fruits":{"apple": "#3efe44", "banana": "#fcdb42", "cherry": "#e31b73", "grape": "#512d5f", "peach": "#f1a78a"},
+"vegetables":{"carrot": "#cc4f1b", "celery": "#8cf47e", "corn": "#fcdb42", "eggplant": "#600b84", "mushroom": "#83764c"},
+"features":{"comfort": "#f1a78a", "efficiency": "#2f6ef6", "reliability": "#443b14", "safety": "#55824d", "speed": "#e81a4b"},
+"activities":{"driving": "#3efe44", "eating": "#cc4f1b", "leisure": "#39f6e0", "sleeping": "#2e3086", "working": "#83764c"}}
+
+var cat_instructions = { "fruits":"<p>You will now be shown a series of different bar graphs depicting people’s preferences for certain fruits.<br>Your task is to figure out which colored bar best represents each fruit (apple, cherry, banana, grape, and peach) from the list above the graph.</p><p> To match a fruit to a bar on the graph, move your cursor to a fruit label and then click and drag the label to the empty box under the preferred bar. Each fruit can only be matched to one bar and every bar must be matched with a fruit in order to proceed. Once you have matched every fruit to their corresponding colored bar on the graph, you may continue to the next bar graph by clicking on the ‘Done’ button that will appear in the upper right region of your screen.</p><p> If you drag a label to a non-preferred bar by mistake, you can click on the ‘Reset labels’ button on the upper left region to reset the labels back to the top of the screen. </p><br>Please press 'Continue' to begin.</p>",
+"vegetables":"<p>You will now be shown a series of different bar graphs depicting people’s preferences for certain vegetables. <br>Your task is to figure out which colored bar best represents each vegetable (eggplant, celery, carrot, mushroom, and corn) from the list above the graph.</p><p> To match a vegetable to a bar on the graph, move your cursor to a vegetable label and then click and drag the label to the empty box under the preferred bar. Each vegetable can only be matched to one bar and every bar must be matched with a vegetable in order to proceed. Once you have matched every vegetable to their corresponding colored bar on the graph, you may continue to the next bar graph by clicking on the ‘Done’ button that will appear in the upper right region of your screen.</p><p> If you drag a label to a non-preferred bar by mistake, you can click on the ‘Reset labels’ button on the upper left region to reset the labels back to the top of the screen.</p><br>Please press 'Continue' to begin.</p>",
+"features":"<p>You will now be shown a series of different bar graphs depicting the ratings of a product’s features.<br>Your task is to figure out which colored bar best represents each feature (speed, reliability, comfort, safety, and efficiency) from the list above the graph.</p><p> To match a feature to a bar on the graph, move your cursor to a feature label and then click and drag the label to the empty box under the preferred bar. Each feature can only be matched to one bar and every bar must be matched with a feature in order to proceed. Once you have matched every feature to their corresponding colored bar on the graph, you may continue to the next bar graph by clicking on the ‘Done’ button that will appear in the upper right region of your screen.</p><p>If you drag a label to a non-preferred bar by mistake, you can click on the ‘Reset labels’ button on the upper left region to reset the labels back to the top of the screen.</p><br>Please press 'Continue' to begin.",
+"activities":"<p>You will now be shown a series of different bar graphs depicting how much someone enjoys certain activities.<br>Your task is to figure out which colored bar best represents each activity (sleeping, eating, driving, and working) from the list above the graph.</p><p> To match an activity to a bar on the graph, move your cursor to an activity label and then click and drag the label to the empty box under the preferred bar. Each activity can only be matched to one bar and every bar must be matched with an activity in order to proceed. Once you have matched every activity to their corresponding colored bar on the graph, you may continue to the next bar graph by clicking on the ‘Done’ button that will appear in the upper right region of your screen.</p><p>If you drag a label to a non-preferred bar by mistake, you can click on the ‘Reset labels’ button on the upper left region to reset the labels back to the top of the screen.</p><br>Please press 'Continue' to begin."
+}
+ 
+
+var pracpal = {"blueberry": "#2e3086", "lemon": "#aac510", "mango": "#f7a75a", "strawberry": "#db1f9d", "watermelon": "#184415"}
+var catchpal = {"blue": "#2f6ef6", "green": "#67cf5c", "red": "#ea1d1d", "yellow": "#fcdb42"}
