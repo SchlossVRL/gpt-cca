@@ -107,12 +107,12 @@
 
 
 
-        var subject_id = jsPsych.randomization.randomID(10); // Create a random ID code for each participant
+        const subject_id = jsPsych.randomization.randomID(10); // Create a random ID code for each participant
+        const sona_id = jsPsych.data.getURLVariable('id');
 
         //Get mTurk/sonaID
         var urlvar = jsPsych.data.urlVariables();
-        var workerID = urlvar.id
-
+      
 
         window.onbeforeunload = function () {
             return "If you leave or refresh the page, you will not be able to finish the experiment. Are you sure you want to leave?";
@@ -166,7 +166,7 @@
 
         jsPsych.data.addProperties({
             subject_id: subject_id,
-            workerID: workerID
+            sona_id: sona_id
         });
 
 
