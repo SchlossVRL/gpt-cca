@@ -1,101 +1,101 @@
 var gptPal = {
-    // "0": {
-    //     "corn": "#c7b88b",
-    //     "carrot": "#cc4f1b",
-    //     "grape": "#600b84",
-    //     "banana": "#d0e942"
-    // },
-    // "1": {
-    //     "sleeping": "#000000",
-    //     "driving": "#d5b811",
-    //     "peach": "#f7a75a",
-    //     "cherry": "#e81a4b"
-    // },
-    // "2": {
-    //     "working": "#777777",
-    //     "leisure": "#cd26c7",
-    //     "safety": "#73cf10",
-    //     "comfort": "#632b14"
-    // },
-    // "3": {
-    //     "eggplant": "#72005e",
-    //     "celery": "#608218",
-    //     "efficiency": "#b9b9b9",
-    //     "speed": "#ea1d1d"
-    // },
-    // "4": {
-    //     "working": "#777777",
-    //     "leisure": "#4bcf8e",
-    //     "grape": "#512d5f",
-    //     "banana": "#d5b811"
-    // },
-    // "5": {
-    //     "eggplant": "#3518ad",
-    //     "celery": "#aac510",
-    //     "peach": "#f7a75a",
-    //     "cherry": "#ea1d1d"
-    // },
-    // "6": {
-    //     "corn": "#d5b811",
-    //     "carrot": "#cc4f1b",
-    //     "safety": "#73cf10",
-    //     "comfort": "#632b14"
-    // },
-    // "7": {
-    //     "sleeping": "#000000",
-    //     "driving": "#d5b811",
-    //     "efficiency": "#67cf5c",
-    //     "speed": "#c94e4b"
-    // },
-	
-    "8": {
-        "corn": "#d5b811",
+    "0": {
+        "corn": "#c7b88b",
         "carrot": "#cc4f1b",
-        "peach": "#f1a78a",
+        "grape": "#600b84",
+        "banana": "#d0e942"
+    },
+    "1": {
+        "sleeping": "#000000",
+        "driving": "#d5b811",
+        "peach": "#f7a75a",
         "cherry": "#e81a4b"
     },
-    "9": {
-        "sleeping": "#000000",
-        "driving": "#ea1d1d",
-        "grape": "#72005e",
-        "banana": "#f7db7c"
-    },
-    "10": {
-        "working": "#632b14",
+    "2": {
+        "working": "#777777",
         "leisure": "#cd26c7",
-        "efficiency": "#1c3d61",
-        "speed": "#ea1d1d"
-    },
-    "11": {
-        "eggplant": "#600b84",
-        "celery": "#a3c55b",
-        "safety": "#d5b811",
+        "safety": "#73cf10",
         "comfort": "#632b14"
     },
-    "12": {
+    "3": {
+        "eggplant": "#72005e",
+        "celery": "#608218",
+        "efficiency": "#b9b9b9",
+        "speed": "#ea1d1d"
+    },
+    "4": {
         "working": "#777777",
         "leisure": "#4bcf8e",
-        "peach": "#f1a78a",
-        "cherry": "#ea1d1d"
-    },
-    "13": {
-        "eggplant": "#512d5f",
-        "celery": "#96c58c",
-        "grape": "#cd26c7",
+        "grape": "#512d5f",
         "banana": "#d5b811"
     },
-    "14": {
-        "corn": "#d5b811",
-        "carrot": "#ac6619",
-        "efficiency": "#73f5b0",
-        "speed": "#ea1d1d"
+    "5": {
+        "eggplant": "#3518ad",
+        "celery": "#aac510",
+        "peach": "#f7a75a",
+        "cherry": "#ea1d1d"
     },
-    "15": {
-        "sleeping": "#000000",
-        "driving": "#ea1d1d",
-        "safety": "#d0e942",
+    "6": {
+        "corn": "#d5b811",
+        "carrot": "#cc4f1b",
+        "safety": "#73cf10",
         "comfort": "#632b14"
-    }
+    },
+    "7": {
+        "sleeping": "#000000",
+        "driving": "#d5b811",
+        "efficiency": "#67cf5c",
+        "speed": "#c94e4b"
+    },
+	
+    // "8": {
+    //     "corn": "#d5b811",
+    //     "carrot": "#cc4f1b",
+    //     "peach": "#f1a78a",
+    //     "cherry": "#e81a4b"
+    // },
+    // "9": {
+    //     "sleeping": "#000000",
+    //     "driving": "#ea1d1d",
+    //     "grape": "#72005e",
+    //     "banana": "#f7db7c"
+    // },
+    // "10": {
+    //     "working": "#632b14",
+    //     "leisure": "#cd26c7",
+    //     "efficiency": "#1c3d61",
+    //     "speed": "#ea1d1d"
+    // },
+    // "11": {
+    //     "eggplant": "#600b84",
+    //     "celery": "#a3c55b",
+    //     "safety": "#d5b811",
+    //     "comfort": "#632b14"
+    // },
+    // "12": {
+    //     "working": "#777777",
+    //     "leisure": "#4bcf8e",
+    //     "peach": "#f1a78a",
+    //     "cherry": "#ea1d1d"
+    // },
+    // "13": {
+    //     "eggplant": "#512d5f",
+    //     "celery": "#96c58c",
+    //     "grape": "#cd26c7",
+    //     "banana": "#d5b811"
+    // },
+    // "14": {
+    //     "corn": "#d5b811",
+    //     "carrot": "#ac6619",
+    //     "efficiency": "#73f5b0",
+    //     "speed": "#ea1d1d"
+    // },
+    // "15": {
+    //     "sleeping": "#000000",
+    //     "driving": "#ea1d1d",
+    //     "safety": "#d0e942",
+    //     "comfort": "#632b14"
+    // }
 }
 
 
