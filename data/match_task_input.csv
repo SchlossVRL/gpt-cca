@@ -1,0 +1,257 @@
+palette,order_num,label_options,answer_key,bar_cols,fname,prompt
+0,1,"['banana', 'corn', 'carrot', 'grape']","['corn', 'carrot', 'grape', 'banana']","['#c7b88b', '#cc4f1b', '#600b84', '#d0e942']",0_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+0,2,"['banana', 'carrot', 'grape', 'corn']","['banana', 'corn', 'carrot', 'grape']","['#d0e942', '#c7b88b', '#cc4f1b', '#600b84']",0_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+0,3,"['corn', 'grape', 'carrot', 'banana']","['grape', 'banana', 'corn', 'carrot']","['#600b84', '#d0e942', '#c7b88b', '#cc4f1b']",0_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+0,4,"['grape', 'carrot', 'corn', 'banana']","['carrot', 'grape', 'banana', 'corn']","['#cc4f1b', '#600b84', '#d0e942', '#c7b88b']",0_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+1,1,"['cherry', 'sleeping', 'peach', 'driving']","['sleeping', 'driving', 'peach', 'cherry']","['#000000', '#d5b811', '#f7a75a', '#e81a4b']",1_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+1,2,"['driving', 'sleeping', 'cherry', 'peach']","['cherry', 'sleeping', 'driving', 'peach']","['#e81a4b', '#000000', '#d5b811', '#f7a75a']",1_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+1,3,"['cherry', 'sleeping', 'driving', 'peach']","['peach', 'cherry', 'sleeping', 'driving']","['#f7a75a', '#e81a4b', '#000000', '#d5b811']",1_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+1,4,"['peach', 'sleeping', 'cherry', 'driving']","['driving', 'peach', 'cherry', 'sleeping']","['#d5b811', '#f7a75a', '#e81a4b', '#000000']",1_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+2,1,"['comfort', 'working', 'leisure', 'safety']","['working', 'leisure', 'safety', 'comfort']","['#777777', '#cd26c7', '#73cf10', '#632b14']",2_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+2,2,"['leisure', 'safety', 'comfort', 'working']","['comfort', 'working', 'leisure', 'safety']","['#632b14', '#777777', '#cd26c7', '#73cf10']",2_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+2,3,"['working', 'comfort', 'leisure', 'safety']","['safety', 'comfort', 'working', 'leisure']","['#73cf10', '#632b14', '#777777', '#cd26c7']",2_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+2,4,"['comfort', 'leisure', 'working', 'safety']","['leisure', 'safety', 'comfort', 'working']","['#cd26c7', '#73cf10', '#632b14', '#777777']",2_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+3,1,"['celery', 'eggplant', 'efficiency', 'speed']","['eggplant', 'celery', 'efficiency', 'speed']","['#72005e', '#608218', '#b9b9b9', '#ea1d1d']",3_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+3,2,"['efficiency', 'eggplant', 'celery', 'speed']","['speed', 'eggplant', 'celery', 'efficiency']","['#ea1d1d', '#72005e', '#608218', '#b9b9b9']",3_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+3,3,"['eggplant', 'speed', 'celery', 'efficiency']","['efficiency', 'speed', 'eggplant', 'celery']","['#b9b9b9', '#ea1d1d', '#72005e', '#608218']",3_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+3,4,"['efficiency', 'speed', 'celery', 'eggplant']","['celery', 'efficiency', 'speed', 'eggplant']","['#608218', '#b9b9b9', '#ea1d1d', '#72005e']",3_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+4,1,"['working', 'leisure', 'grape', 'banana']","['working', 'leisure', 'grape', 'banana']","['#777777', '#4bcf8e', '#512d5f', '#d5b811']",4_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+4,2,"['leisure', 'banana', 'grape', 'working']","['banana', 'working', 'leisure', 'grape']","['#d5b811', '#777777', '#4bcf8e', '#512d5f']",4_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+4,3,"['banana', 'grape', 'leisure', 'working']","['grape', 'banana', 'working', 'leisure']","['#512d5f', '#d5b811', '#777777', '#4bcf8e']",4_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+4,4,"['banana', 'leisure', 'grape', 'working']","['leisure', 'grape', 'banana', 'working']","['#4bcf8e', '#512d5f', '#d5b811', '#777777']",4_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+5,1,"['cherry', 'celery', 'peach', 'eggplant']","['eggplant', 'celery', 'peach', 'cherry']","['#3518ad', '#aac510', '#f7a75a', '#ea1d1d']",5_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+5,2,"['peach', 'cherry', 'eggplant', 'celery']","['cherry', 'eggplant', 'celery', 'peach']","['#ea1d1d', '#3518ad', '#aac510', '#f7a75a']",5_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+5,3,"['celery', 'peach', 'cherry', 'eggplant']","['peach', 'cherry', 'eggplant', 'celery']","['#f7a75a', '#ea1d1d', '#3518ad', '#aac510']",5_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+5,4,"['cherry', 'peach', 'celery', 'eggplant']","['celery', 'peach', 'cherry', 'eggplant']","['#aac510', '#f7a75a', '#ea1d1d', '#3518ad']",5_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+6,1,"['comfort', 'safety', 'carrot', 'corn']","['corn', 'carrot', 'safety', 'comfort']","['#d5b811', '#cc4f1b', '#73cf10', '#632b14']",6_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+6,2,"['comfort', 'corn', 'safety', 'carrot']","['comfort', 'corn', 'carrot', 'safety']","['#632b14', '#d5b811', '#cc4f1b', '#73cf10']",6_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+6,3,"['safety', 'comfort', 'carrot', 'corn']","['safety', 'comfort', 'corn', 'carrot']","['#73cf10', '#632b14', '#d5b811', '#cc4f1b']",6_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+6,4,"['safety', 'carrot', 'corn', 'comfort']","['carrot', 'safety', 'comfort', 'corn']","['#cc4f1b', '#73cf10', '#632b14', '#d5b811']",6_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+7,1,"['efficiency', 'speed', 'sleeping', 'driving']","['sleeping', 'driving', 'efficiency', 'speed']","['#000000', '#d5b811', '#67cf5c', '#c94e4b']",7_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+7,2,"['driving', 'speed', 'sleeping', 'efficiency']","['speed', 'sleeping', 'driving', 'efficiency']","['#c94e4b', '#000000', '#d5b811', '#67cf5c']",7_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+7,3,"['driving', 'speed', 'efficiency', 'sleeping']","['efficiency', 'speed', 'sleeping', 'driving']","['#67cf5c', '#c94e4b', '#000000', '#d5b811']",7_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+7,4,"['efficiency', 'speed', 'sleeping', 'driving']","['driving', 'efficiency', 'speed', 'sleeping']","['#d5b811', '#67cf5c', '#c94e4b', '#000000']",7_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+8,1,"['peach', 'carrot', 'corn', 'cherry']","['corn', 'carrot', 'peach', 'cherry']","['#d5b811', '#cc4f1b', '#f1a78a', '#e81a4b']",8_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+8,2,"['corn', 'peach', 'carrot', 'cherry']","['cherry', 'corn', 'carrot', 'peach']","['#e81a4b', '#d5b811', '#cc4f1b', '#f1a78a']",8_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+8,3,"['corn', 'carrot', 'peach', 'cherry']","['peach', 'cherry', 'corn', 'carrot']","['#f1a78a', '#e81a4b', '#d5b811', '#cc4f1b']",8_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+8,4,"['peach', 'cherry', 'carrot', 'corn']","['carrot', 'peach', 'cherry', 'corn']","['#cc4f1b', '#f1a78a', '#e81a4b', '#d5b811']",8_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+9,1,"['driving', 'banana', 'sleeping', 'grape']","['sleeping', 'driving', 'grape', 'banana']","['#000000', '#ea1d1d', '#72005e', '#f7db7c']",9_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+9,2,"['grape', 'sleeping', 'driving', 'banana']","['banana', 'sleeping', 'driving', 'grape']","['#f7db7c', '#000000', '#ea1d1d', '#72005e']",9_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+9,3,"['banana', 'driving', 'grape', 'sleeping']","['grape', 'banana', 'sleeping', 'driving']","['#72005e', '#f7db7c', '#000000', '#ea1d1d']",9_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+9,4,"['sleeping', 'banana', 'grape', 'driving']","['driving', 'grape', 'banana', 'sleeping']","['#ea1d1d', '#72005e', '#f7db7c', '#000000']",9_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+10,1,"['leisure', 'efficiency', 'speed', 'working']","['working', 'leisure', 'efficiency', 'speed']","['#632b14', '#cd26c7', '#1c3d61', '#ea1d1d']",10_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+10,2,"['efficiency', 'leisure', 'speed', 'working']","['speed', 'working', 'leisure', 'efficiency']","['#ea1d1d', '#632b14', '#cd26c7', '#1c3d61']",10_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+10,3,"['leisure', 'efficiency', 'speed', 'working']","['efficiency', 'speed', 'working', 'leisure']","['#1c3d61', '#ea1d1d', '#632b14', '#cd26c7']",10_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+10,4,"['working', 'efficiency', 'speed', 'leisure']","['leisure', 'efficiency', 'speed', 'working']","['#cd26c7', '#1c3d61', '#ea1d1d', '#632b14']",10_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+11,1,"['safety', 'eggplant', 'celery', 'comfort']","['eggplant', 'celery', 'safety', 'comfort']","['#600b84', '#a3c55b', '#d5b811', '#632b14']",11_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+11,2,"['safety', 'celery', 'eggplant', 'comfort']","['comfort', 'eggplant', 'celery', 'safety']","['#632b14', '#600b84', '#a3c55b', '#d5b811']",11_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+11,3,"['eggplant', 'safety', 'comfort', 'celery']","['safety', 'comfort', 'eggplant', 'celery']","['#d5b811', '#632b14', '#600b84', '#a3c55b']",11_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+11,4,"['celery', 'safety', 'eggplant', 'comfort']","['celery', 'safety', 'comfort', 'eggplant']","['#a3c55b', '#d5b811', '#632b14', '#600b84']",11_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+12,1,"['peach', 'leisure', 'working', 'cherry']","['working', 'leisure', 'peach', 'cherry']","['#777777', '#4bcf8e', '#f1a78a', '#ea1d1d']",12_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+12,2,"['cherry', 'working', 'leisure', 'peach']","['cherry', 'working', 'leisure', 'peach']","['#ea1d1d', '#777777', '#4bcf8e', '#f1a78a']",12_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+12,3,"['working', 'cherry', 'leisure', 'peach']","['peach', 'cherry', 'working', 'leisure']","['#f1a78a', '#ea1d1d', '#777777', '#4bcf8e']",12_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+12,4,"['working', 'cherry', 'leisure', 'peach']","['leisure', 'peach', 'cherry', 'working']","['#4bcf8e', '#f1a78a', '#ea1d1d', '#777777']",12_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+13,1,"['celery', 'banana', 'eggplant', 'grape']","['eggplant', 'celery', 'grape', 'banana']","['#512d5f', '#96c58c', '#cd26c7', '#d5b811']",13_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+13,2,"['celery', 'banana', 'eggplant', 'grape']","['banana', 'eggplant', 'celery', 'grape']","['#d5b811', '#512d5f', '#96c58c', '#cd26c7']",13_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+13,3,"['eggplant', 'grape', 'banana', 'celery']","['grape', 'banana', 'eggplant', 'celery']","['#cd26c7', '#d5b811', '#512d5f', '#96c58c']",13_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+13,4,"['eggplant', 'grape', 'banana', 'celery']","['celery', 'grape', 'banana', 'eggplant']","['#96c58c', '#cd26c7', '#d5b811', '#512d5f']",13_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+14,1,"['carrot', 'speed', 'corn', 'efficiency']","['corn', 'carrot', 'efficiency', 'speed']","['#d5b811', '#ac6619', '#73f5b0', '#ea1d1d']",14_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+14,2,"['speed', 'carrot', 'efficiency', 'corn']","['speed', 'corn', 'carrot', 'efficiency']","['#ea1d1d', '#d5b811', '#ac6619', '#73f5b0']",14_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+14,3,"['corn', 'carrot', 'speed', 'efficiency']","['efficiency', 'speed', 'corn', 'carrot']","['#73f5b0', '#ea1d1d', '#d5b811', '#ac6619']",14_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+14,4,"['speed', 'efficiency', 'corn', 'carrot']","['carrot', 'efficiency', 'speed', 'corn']","['#ac6619', '#73f5b0', '#ea1d1d', '#d5b811']",14_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+15,1,"['safety', 'driving', 'sleeping', 'comfort']","['sleeping', 'driving', 'safety', 'comfort']","['#000000', '#ea1d1d', '#d0e942', '#632b14']",15_1.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+15,2,"['sleeping', 'comfort', 'driving', 'safety']","['comfort', 'sleeping', 'driving', 'safety']","['#632b14', '#000000', '#ea1d1d', '#d0e942']",15_2.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+15,3,"['sleeping', 'comfort', 'driving', 'safety']","['safety', 'comfort', 'sleeping', 'driving']","['#d0e942', '#632b14', '#000000', '#ea1d1d']",15_3.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
+15,4,"['comfort', 'safety', 'driving', 'sleeping']","['driving', 'safety', 'comfort', 'sleeping']","['#ea1d1d', '#d0e942', '#632b14', '#000000']",15_4.png,"Q: In this graph, map each of the four words above the bars to the correct bar based on its color. Each word should be mapped to a single colored bar.  Think about the optimal mapping between all words and colors.The bars are indexed used the letters A, B, C, and D 
+ Format your answer like this - A: word 1, B: word 2, C: word 3, D: word 4 
+ Respond in json format
+ A:"
