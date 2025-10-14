@@ -40,7 +40,7 @@ ratings_all = pd.concat([ratings1,ratings2,ratings3])
 
 uw71coords = pd.read_csv('../../data/UW71coordinates_long.csv')
 
-client = OpenAI(api_key ="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" )
+client = OpenAI(api_key ="" )
 
 import time
 from tqdm import tqdm
