@@ -1,0 +1,80 @@
+---
+title: "gpt_cca_regressions"
+format: html
+editor: visual
+---
+
+```{r}
+# List of packages
+packages <- c( "lme4", "lmerTest","dplyr","tidyverse","sjPlot")
+
+
+install_and_load_packages <- function(packages) {
+  for(package in packages) {
+    if(!require(package, character.only = TRUE)) {
+      install.packages(package, dependencies = TRUE)
+      library(package, character.only = TRUE)
+    }
+  }
+}
+
+# Call the function with the list of packages
+install_and_load_packages(packages)
+
+```
+
+```{r}
+current_dir<- getwd()
+print(current_dir)
+
+```
+
+```{r}
+
+df<- read_csv('../../data/mixed_effect_model_df.csv')
+```
+
+```{r}
+
+### center variables
+df$sem_contrast_c <- scale(df$sem_contrast)
+
+df$rating_c <-scale(df$rating)
+
+df$log_spec_c <- scale(df$log_spec)
+
+```
+
+```{r}
+
+m1<- glmer(accuracy~ rating_c + sem_contrast_c + log_spec_c+ (rating_c + sem_contrast_c + log_spec_c|subject_id), df, family = binomial)
+summary(m1)
+
+```
+
+```{r}
+tab_model(m1,show.df = TRUE,file='mixed_effect_model_table.html')
+```
+
+```{r}
+exp3_df<-read_csv('../../data/exp_3_reg_df.csv')
+exp3_df$concreteness_c<- exp3_df$concreteness - mean(exp3_df$concreteness)
+exp3_df$cor_type<-
+factor(exp3_df$cor_type, levels = c("Image Statistics Model", "Patches and Hex Codes"))
+
+m2<- lm(cor~ concreteness_c*cor_type, data=exp3_df)
+summary(m2)
+```
+
+```{r}
+human_v_gpt_df <- read_csv('../../data/human_v_gpt_mixed_model_df.csv')
+human_v_gpt_df$condition <- factor(human_v_gpt_df$condition, 
+                                  levels = c("human", "gpt"))
+```
+
+```{r}
+m3<- glmer(accuracy ~ factor(condition)+(1|subject_id)+(1|conc_pal), 
+           family=binomial,
+           data = human_v_gpt_df )
+summary(m3)
+```
